@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+
+
 const App = () => {
   const [activeTab, setActiveTab] = useState('Tickets');
   const [searchTerm, setSearchTerm] = useState('');
@@ -93,6 +95,16 @@ const App = () => {
     prioridad: '',
     asignado: '',
     miEquipo: false
+  });
+
+    // Vista de Ajustes
+  const [settings, setSettings] = useState({
+    notifications: true,
+    emailAlerts: true,
+    autoAssign: false,
+    language: 'es',
+    timezone: 'America/Mexico_City',
+    theme: 'light'
   });
 
   const users = [
@@ -1259,15 +1271,6 @@ const App = () => {
     );
   }
 
-  // Vista de Ajustes
-  const [settings, setSettings] = useState({
-    notifications: true,
-    emailAlerts: true,
-    autoAssign: false,
-    language: 'es',
-    timezone: 'America/Mexico_City',
-    theme: 'light'
-  });
 
   const handleSettingChange = (key, value) => {
     setSettings(prev => ({ ...prev, [key]: value }));
