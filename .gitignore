@@ -20,7 +20,6 @@ pnpm-lock.yaml
 /.nyc_output
 
 # Environment variables
-.env
 .env.*
 !.env.example
 
